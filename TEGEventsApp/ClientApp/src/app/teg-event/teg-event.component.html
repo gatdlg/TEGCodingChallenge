@@ -1,0 +1,14 @@
+
+<!-- TODO: Code that would update the calendar based on the selected venue -->
+
+<div class="mb-5">
+  <h5>Venues</h5>
+  <select *ngIf="tegvenues">
+    <option>-</option>
+    <option *ngFor="let venue of tegvenues" [value]="venue">
+      {{venue.name}}
+    </option>
+  </select>
+</div>
+
+<full-calendar [options]="calendarOptions"></full-calendar>
